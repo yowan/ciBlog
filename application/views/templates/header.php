@@ -3,6 +3,7 @@
                 <title>ciBlog Tutorial</title>
                 <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
                 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/style.css">
+                <script src="http://cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>
         </head>
         <body>
 
@@ -25,10 +26,11 @@
 				        <a class="nav-link" href="<?php echo base_url(); ?>posts">Blog</a>
 				      </li>
 				    </ul>
-				    <form class="form-inline my-2 my-lg-0">
-				      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-				      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-				    </form>
+				    <ul class="nav navbar-nav navbar-right">
+				    	<li>
+				        <a class="nav-link" href="<?php echo base_url(); ?>posts/create">Create Post</a>
+				      </li>
+				    </ul>				    
 				  </div>
 				</nav>
 

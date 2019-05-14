@@ -64,6 +64,28 @@ class Posts extends CI_Controller {
 		redirect('posts');
 	}
 
+	public function edit($slug){
+		
+		$data['post'] = $this->post_model->get_posts($slug);
+
+		if (empty($data['post'])) {
+			# code...
+			show_404();
+		}
+
+		$data['title'] = 'Edit Post';
+
+		$this->load->view('templates/header', $data);
+		$this->load->view('posts/edit', $data);
+		$this->load->view('templates/footer', $data);
+	}
+
+	public function update(){
+
+		$this->post_model->update_post();
+		redirect('posts');
+	}
+
 
 
 

@@ -6,6 +6,7 @@
 
 <hr/>
 
+<a class="btn btn-secondary pull-left" href="<?php echo base_url();?>posts/edit/<?php echo $post['slug']; ?>">Edit</a>
 <?php echo form_open('posts/delete/' . $post['id']); ?>
 	<input type="submit" value="Delete" class="btn btn-danger">
 </form>
